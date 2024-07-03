@@ -34,5 +34,8 @@ public class VRControllerInput : MonoBehaviour
         ik.solver.leftArm.target.position = handPosition.ReadValue<Vector3>();
         ik.solver.leftArm.target.rotation = handRotation.ReadValue<Quaternion>();
         // Repeat for the right arm or other parts as needed
+
+        ik.solver.rightArm.target.position = handPosition.ReadValue<Vector3>();
+        ik.solver.rightArm.target.rotation = handRotation.ReadValue<Quaternion>();
     }
 }
