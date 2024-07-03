@@ -202,7 +202,7 @@ MonoBehaviour:
     plantFeet: 1
     spine:
       bones: []
-      headTarget: {fileID: 542503465}
+      headTarget: {fileID: 1473604654}
       positionWeight: 1
       rotationWeight: 1
       headClampWeight: 0.6
@@ -226,7 +226,7 @@ MonoBehaviour:
       rootHeadingOffset: 0
     leftArm:
       bones: []
-      target: {fileID: 2059065460}
+      target: {fileID: 1139872925}
       positionWeight: 0.659
       rotationWeight: 0.231
       shoulderRotationWeight: 1
@@ -248,7 +248,7 @@ MonoBehaviour:
         m_RotationOrder: 4
     rightArm:
       bones: []
-      target: {fileID: 625539596}
+      target: {fileID: 832830232}
       positionWeight: 0.617
       rotationWeight: 0.209
       shoulderRotationWeight: 1
@@ -287,7 +287,7 @@ MonoBehaviour:
       useAnimatedBendNormal: 0
     rightLeg:
       bones: []
-      target: {fileID: 1162813092}
+      target: {fileID: 0}
       positionWeight: 0.597
       rotationWeight: 0
       bendGoal: {fileID: 0}
