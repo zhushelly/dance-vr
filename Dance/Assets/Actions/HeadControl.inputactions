@@ -1,0 +1,54 @@
+{
+    "name": "HeadControl",
+    "maps": [
+        {
+            "name": "Head Tracking",
+            "id": "0dab0f63-227d-4a02-b07c-4a2e73b3ebb1",
+            "actions": [
+                {
+                    "name": "Head Position",
+                    "type": "Value",
+                    "id": "8c05640d-df14-4f36-9588-e5dc86451670",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head Rotation",
+                    "type": "Value",
+                    "id": "cfe2b0c0-760c-4bde-9187-95cea55eebf5",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1a1fef6e-43da-4d56-a76f-78f7d0229854",
+                    "path": "/<XRHMD>/centerEyePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "544a1d2a-7c0e-4320-b636-c4b022b3d2de",
+                    "path": "/<XRHMD>/centerEyeRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
