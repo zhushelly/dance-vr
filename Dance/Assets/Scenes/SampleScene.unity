@@ -424,6 +424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4794923b04673b140860b5608e5ab229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ik: {fileID: 159555243}
+  headTarget: {fileID: 542503465}
+  inputActions: {fileID: -944628639613478452, guid: 06ba28f66a0e7e94fbc6b55e25025f8c,
+    type: 3}
 --- !u!4 &317632442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6515712193588681746, guid: fac8b9ad36d6c5449b0682a9519236bb,

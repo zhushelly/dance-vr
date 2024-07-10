@@ -5,7 +5,7 @@ using RootMotion.FinalIK;
 public class VRControllerInput : MonoBehaviour
 {
     public VRIK ik; // Reference to the VRIK component on your avatar
-    public InputActionAsset inputActions; // Your Input Actions asset
+    public InputActionAsset inputActions; // Controller tracking Input Actions asset
 
     private InputAction leftHandPosition;
     private InputAction leftHandRotation;

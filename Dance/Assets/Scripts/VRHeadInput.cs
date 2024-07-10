@@ -6,7 +6,7 @@ public class VRHeadInput : MonoBehaviour
 {
     public VRIK ik; // Reference to the VRIK component on your avatar
     public Transform headTarget; // Direct reference to the Head Target Transform
-    public InputActionAsset inputActions; 
+    public InputActionAsset inputActions; // Head tracking Input Actions asset
 
     private InputAction headPosition;
     private InputAction headRotation;
@@ -19,7 +19,7 @@ public class VRHeadInput : MonoBehaviour
 
         // Ensure the headTarget is assigned
         if (headTarget == null && ik != null)
-            headTarget = ik.references.head; // Assuming the head target is already assigned via inspector
+            headTarget = ik.references.head; // HeadTarget assigned in inspector
     }
 
     void OnEnable()
