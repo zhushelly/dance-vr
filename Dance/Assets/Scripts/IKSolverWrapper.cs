@@ -1,5 +1,5 @@
 using UnityEngine;
-using RootMotion.FinalIK;  // Assuming this is the correct namespace
+using RootMotion.FinalIK;  
 
 public class IKSolverWrapper : MonoBehaviour
 {

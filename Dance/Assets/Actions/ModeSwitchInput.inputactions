@@ -1,0 +1,34 @@
+{
+    "name": "ModeSwitchInput",
+    "maps": [
+        {
+            "name": "PlayerControls",
+            "id": "92ac74bf-446c-4675-95b5-7713f870fbaf",
+            "actions": [
+                {
+                    "name": "ToggleMode",
+                    "type": "Button",
+                    "id": "e8125fbe-4b14-4c9d-8621-662e7bdd8699",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5edbeedd-c72f-4f3a-acdd-2371eed8cfe0",
+                    "path": "<OculusTouchController>/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
