@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class JointRotationLimits : MonoBehaviour
 {
-    public VRIK vrik;
+    public VRIK ik;
     
     void Start()
     {
-        // Assuming vrik.references.leftForearm and vrik.references.rightForearm are the elbow joints
-        AddRotationLimit(vrik.references.leftForearm, new Vector3(1, 0, 0), 90); // Limit left elbow to 90 degrees on the X axis
-        AddRotationLimit(vrik.references.rightForearm, new Vector3(1, 0, 0), 90); // Limit right elbow to 90 degrees on the X axis
+        // Assuming ik.references.leftForearm and ik.references.rightForearm are the elbow joints
+        AddRotationLimit(ik.references.leftForearm, new Vector3(1, 0, 0), 90); // Limit left elbow to 90 degrees on the X axis
+        AddRotationLimit(ik.references.rightForearm, new Vector3(1, 0, 0), 90); // Limit right elbow to 90 degrees on the X axis
     }
 
     void AddRotationLimit(Transform joint, Vector3 axis, float limit)

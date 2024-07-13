@@ -7,6 +7,7 @@ public class VRHeadInput : MonoBehaviour
     public VRIK ik; // Reference to the VRIK component on your avatar
     public Transform headTarget; // Direct reference to the Head Target Transform
     public InputActionAsset inputActions; // Head tracking Input Actions asset
+    public Vector3 offset; // Offset for the head position
 
     private InputAction headPosition;
     private InputAction headRotation;
@@ -39,8 +40,12 @@ public class VRHeadInput : MonoBehaviour
         // Directly update the HeadTarget's Transform
         if (headTarget != null)
         {
-            headTarget.position = headPosition.ReadValue<Vector3>();
-            headTarget.rotation = headRotation.ReadValue<Quaternion>();
+            Vector3 headPos = headPosition.ReadValue<Vector3>();
+            Quaternion headRot = headRotation.ReadValue<Quaternion>();
+
+            // Apply the offset
+            headTarget.position = headPos + headRot * offset;
+            headTarget.rotation = headRot;
         }
     }
 }
