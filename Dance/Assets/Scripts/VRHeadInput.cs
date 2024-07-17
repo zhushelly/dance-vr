@@ -5,47 +5,40 @@ using RootMotion.FinalIK;
 public class VRHeadInput : MonoBehaviour
 {
     public VRIK ik; // Reference to the VRIK component on your avatar
-    public Transform headTarget; // Direct reference to the Head Target Transform
     public InputActionAsset inputActions; // Head tracking Input Actions asset
-    public Vector3 offset; // Offset for the head position
 
     private InputAction headPosition;
     private InputAction headRotation;
 
     void Awake()
     {
+        // Initialize actions from your input asset
         var actionMap = inputActions.FindActionMap("Head Tracking");
         headPosition = actionMap.FindAction("Head Position");
         headRotation = actionMap.FindAction("Head Rotation");
-
-        // Ensure the headTarget is assigned
-        if (headTarget == null && ik != null)
-            headTarget = ik.references.head; // HeadTarget assigned in inspector
     }
 
     void OnEnable()
     {
+        // Enable actions
         headPosition.Enable();
         headRotation.Enable();
     }
 
     void OnDisable()
     {
+        // Disable actions
         headPosition.Disable();
         headRotation.Disable();
     }
 
     void Update()
     {
-        // Directly update the HeadTarget's Transform
-        if (headTarget != null)
+        // Apply head position and rotation to the VRIK target
+        if (ik.solver.spine.headTarget != null)
         {
-            Vector3 headPos = headPosition.ReadValue<Vector3>();
-            Quaternion headRot = headRotation.ReadValue<Quaternion>();
-
-            // Apply the offset
-            headTarget.position = headPos + headRot * offset;
-            headTarget.rotation = headRot;
+            ik.solver.spine.headTarget.position = headPosition.ReadValue<Vector3>();
+            ik.solver.spine.headTarget.rotation = headRotation.ReadValue<Quaternion>();
         }
     }
 }
