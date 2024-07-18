@@ -236,7 +236,7 @@ MonoBehaviour:
       headTarget: {fileID: 542503465}
       positionWeight: 1
       rotationWeight: 1
-      headClampWeight: 0.6
+      headClampWeight: 0.4
       minHeadHeight: 0.8
       useAnimatedHeadHeightWeight: 0
       useAnimatedHeadHeightRange: 0.1
@@ -264,7 +264,7 @@ MonoBehaviour:
       shoulderRotationMode: 0
       shoulderTwistWeight: 1
       shoulderYawOffset: 45
-      shoulderPitchOffset: -30
+      shoulderPitchOffset: 45
       bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
       shoulderRotationMode: 0
       shoulderTwistWeight: 1
       shoulderYawOffset: 45
-      shoulderPitchOffset: -30
+      shoulderPitchOffset: 45
       bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: -0
@@ -1106,14 +1106,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625539595}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.893, y: 0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &687293821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6874584590210671055, guid: fac8b9ad36d6c5449b0682a9519236bb,
@@ -3588,14 +3588,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059065459}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.824, y: 1.048, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066258491
 GameObject:
   m_ObjectHideFlags: 0
