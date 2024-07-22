@@ -6,6 +6,7 @@ public class ModeSwitcher : MonoBehaviour
     public Animator animator; // Reference to the Animator component
     public GameObject leftHandController; // Reference to the Left Hand Controller
     public GameObject rightHandController; // Reference to the Right Hand Controller
+    public GameObject Headset;
 
     private bool isAnimationPlaying = true; // Track the current mode
     private ModeSwitchInput inputActions; // Input actions reference

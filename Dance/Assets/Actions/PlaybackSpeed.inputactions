@@ -1,0 +1,34 @@
+{
+    "name": "PlaybackSpeed",
+    "maps": [
+        {
+            "name": "PlayerControls",
+            "id": "3e3ff9a9-06e4-44f6-b4e3-452f38e07ba1",
+            "actions": [
+                {
+                    "name": "ChangeSpeed",
+                    "type": "Value",
+                    "id": "9c3c1234-db9f-4779-b84f-34836b2dbbd7",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c7fe6a6a-23f2-4f34-b55f-58d76a6c5f8c",
+                    "path": "<OculusTouchController>{RightHand}/thumbstick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeSpeed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
