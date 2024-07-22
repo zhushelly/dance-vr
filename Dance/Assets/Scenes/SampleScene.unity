@@ -2720,7 +2720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81890cbd8b5f19343940980edc4c7c35, type: 2}
+  - {fileID: 2100000, guid: ac5ea9d8095162f4aa5ff47a5f03f627, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3495,15 +3495,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fac8b9ad36d6c5449b0682a9519236bb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1621289972}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fac8b9ad36d6c5449b0682a9519236bb,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1621289971}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fac8b9ad36d6c5449b0682a9519236bb,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1621289973}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fac8b9ad36d6c5449b0682a9519236bb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1621289974}
   m_SourcePrefab: {fileID: 100100000, guid: fac8b9ad36d6c5449b0682a9519236bb, type: 3}
 --- !u!95 &1621289970 stripped
 Animator:
@@ -3524,7 +3524,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ik: {fileID: 159555243}
---- !u!114 &1621289972
+--- !u!114 &1621289973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159555239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd8608d77579fa4687f68409b02b7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1621289970}
+--- !u!114 &1621289974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3539,19 +3552,7 @@ MonoBehaviour:
   animator: {fileID: 1621289970}
   leftHandController: {fileID: 1139872924}
   rightHandController: {fileID: 832830231}
---- !u!114 &1621289973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159555239}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd8608d77579fa4687f68409b02b7a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1621289970}
+  headset: {fileID: 1473604653}
 --- !u!4 &1799848308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2770666803903516498, guid: fac8b9ad36d6c5449b0682a9519236bb,

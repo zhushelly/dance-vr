@@ -6,7 +6,7 @@ public class ModeSwitcher : MonoBehaviour
     public Animator animator; // Reference to the Animator component
     public GameObject leftHandController; // Reference to the Left Hand Controller
     public GameObject rightHandController; // Reference to the Right Hand Controller
-    public GameObject headset; // Reference to the headset
+    public GameObject headset;
 
     private bool isAnimationPlaying = true; // Track the current mode
     private ModeSwitchInput inputActions; // Input actions reference
@@ -45,7 +45,7 @@ public class ModeSwitcher : MonoBehaviour
         animator.enabled = true; // Enable the animator to play the animation
         leftHandController.SetActive(false); // Disable left hand controller input
         rightHandController.SetActive(false); // Disable right hand controller input
-        headset.SetActive(false); // Disable headset input
+        headset.SetActive(false);
         isAnimationPlaying = true;
     }
 
@@ -54,7 +54,7 @@ public class ModeSwitcher : MonoBehaviour
         animator.enabled = false; // Disable the animator to stop the animation
         leftHandController.SetActive(true); // Enable left hand controller input
         rightHandController.SetActive(true); // Enable right hand controller input
-        headset.SetActive(true); // Enable headset input
+        headset.SetActive(true);
         isAnimationPlaying = false;
     }
 }
