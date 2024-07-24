@@ -1,0 +1,942 @@
+fileFormatVersion: 2
+guid: 140cec037e905ae4a92deb10ab4abec9
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Noh-Suriashi
+      takeName: Noh-Suriashi
+      internalID: -3939513330157738063
+      firstFrame: 0
+      lastFrame: 458
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Ba-Echappe
+      takeName: Ba-Echappe
+      internalID: -1870232452323148130
+      firstFrame: 0
+      lastFrame: 304
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Hip
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Hip
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Knee
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Knee
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Ankle
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Ankle
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Collar
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Collar
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Shoulder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Shoulder
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Elbow
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Elbow
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Wrist
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Wrist
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Foot
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Foot
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_midcarpal_1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_carpometacarpal_1
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_metacarpophalangeal_1
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_carpometacarpal_2
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_metacarpophalangeal_2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_carpal_proximal_interphalangeal_2
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_midcarpal_3
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_carpometacarpal_3
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_metacarpophalangeal_3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_carpometacarpal_4
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_metacarpophalangeal_4
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_carpal_proximal_interphalangeal_4
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_carpometacarpal_5
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_metacarpophalangeal_5
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: l_carpal_proximal_interphalangeal_5
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_midcarpal_1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_carpometacarpal_1
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_metacarpophalangeal_1
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_carpometacarpal_2
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_metacarpophalangeal_2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_carpal_proximal_interphalangeal_2
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_midcarpal_3
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_carpometacarpal_3
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_metacarpophalangeal_3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_carpometacarpal_4
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_metacarpophalangeal_4
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_carpal_proximal_interphalangeal_4
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_carpometacarpal_5
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_metacarpophalangeal_5
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_carpal_proximal_interphalangeal_5
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: X_Bot_edit1_2motions(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: reference
+      parentName: X_Bot_edit1_2motions(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pelvis
+      parentName: reference
+      position: {x: -0.0000401306, y: 0.9054999, z: 0.000024986299}
+      rotation: {x: -0, y: -0, z: -1.0404686e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Hip
+      parentName: Pelvis
+      position: {x: -0.08, y: -0.03, z: 0.0058989297}
+      rotation: {x: 8.323749e-10, y: -0.0000000016647496, z: -0.000000007777501, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Knee
+      parentName: L_Hip
+      position: {x: -0, y: -0.39999998, z: 0}
+      rotation: {x: -0, y: -0.000000004994249, z: 0.0000000027832523, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: L_Ankle
+      parentName: L_Knee
+      position: {x: -0, y: -0.39, z: -0.02}
+      rotation: {x: -0.0000000024971243, y: 0.000000004994249, z: 0.000000003745687,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Foot
+      parentName: L_Ankle
+      position: {x: -0.01, y: -0.06, z: 0.114999995}
+      rotation: {x: 0.025800837, y: 0.000000001668222, z: 1.13066015e-10, w: 0.9996671}
+      scale: {x: 1, y: 1.0000004, z: 0.9999999}
+    - name: l_metatarsal_End
+      parentName: L_Foot
+      position: {x: -0, y: 0, z: 0.0598}
+      rotation: {x: -0, y: -0, z: 3.469447e-18, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: R_Hip
+      parentName: Pelvis
+      position: {x: 0.08, y: -0.03, z: -0.0055932496}
+      rotation: {x: -8.323747e-10, y: -0.0000000033294991, z: -0.0000000022370072,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Knee
+      parentName: R_Hip
+      position: {x: -0, y: -0.39999998, z: 0}
+      rotation: {x: -1.6653345e-16, y: -0.0000000033294991, z: -0.000000010768848,
+        w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: R_Ankle
+      parentName: R_Knee
+      position: {x: -0, y: -0.39, z: -0.02}
+      rotation: {x: 8.3237506e-10, y: -0.0000000066589987, z: 0.000000007283278, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Foot
+      parentName: R_Ankle
+      position: {x: 0.01, y: -0.06, z: 0.114999995}
+      rotation: {x: 0.046795946, y: 0.000000012913889, z: -0.000000008937858, w: 0.99890447}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: r_metatarsal_End
+      parentName: R_Foot
+      position: {x: -0, y: 3.330669e-18, z: 0.0598}
+      rotation: {x: -0, y: -0, z: -1.6653345e-16, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Spine1
+      parentName: Pelvis
+      position: {x: -0, y: 0.14, z: 0}
+      rotation: {x: 1.9053313e-18, y: 0.0000000016647497, z: 5.202343e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck
+      parentName: Spine1
+      position: {x: -0, y: 0.34, z: 0.049999997}
+      rotation: {x: 0.000000006658998, y: -0.0000000020809372, z: -0.0000000015607029,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Head
+      parentName: Neck
+      position: {x: -0, y: 0.089999996, z: 0.01}
+      rotation: {x: -0.000000006658998, y: 0.0000000012485624, z: 7.28328e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: skullbase_End
+      parentName: Head
+      position: {x: -0, y: 0.15939999, z: -0.0117999995}
+      rotation: {x: -0, y: -0, z: 8.314174e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Collar
+      parentName: Spine1
+      position: {x: -0.07, y: 0.28, z: 0.04}
+      rotation: {x: -0, y: -0, z: -3.1718997e-27, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: L_Shoulder
+      parentName: L_Collar
+      position: {x: -0.08, y: -0.02, z: 0}
+      rotation: {x: 0.00000000824009, y: 0.0000000011771563, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: L_Elbow
+      parentName: L_Shoulder
+      position: {x: -0, y: -0.22999999, z: 0}
+      rotation: {x: -0.0000000066589974, y: -0.000000033294995, z: 1.4549805e-16,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: L_Wrist
+      parentName: L_Elbow
+      position: {x: -0, y: -0.24, z: 0}
+      rotation: {x: 0.0000000033294993, y: 0.000000013317999, z: -8.037037e-17, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: l_midcarpal_1
+      parentName: L_Wrist
+      position: {x: -2.842171e-16, y: -0.029161595, z: 0.018282762}
+      rotation: {x: -0.00479936, y: 5.2292386e-11, z: 6.791273e-11, w: 0.99998856}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpometacarpal_1
+      parentName: l_midcarpal_1
+      position: {x: -0.000000044246015, y: -0.025699995, z: 0.012730464}
+      rotation: {x: -0.06847777, y: -0.0000000033106817, z: 9.495158e-10, w: 0.9976527}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_metacarpophalangeal_1
+      parentName: l_carpometacarpal_1
+      position: {x: -0, y: -0.01931038, z: 0.0048546693}
+      rotation: {x: -0.10204498, y: 0.00010323126, z: 0.00041061238, w: 0.9947797}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_interphalangeal_1
+      parentName: l_metacarpophalangeal_1
+      position: {x: -0.000024409883, y: -0.021365687, z: -0.000672073}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_midcarpal_2
+      parentName: L_Wrist
+      position: {x: -2.842171e-16, y: -0.037900534, z: 0.008433241}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpometacarpal_2
+      parentName: l_midcarpal_2
+      position: {x: -0.00049429893, y: -0.049984284, z: 0.0041286848}
+      rotation: {x: 0.049602818, y: -0.00011769632, z: 0.0007781974, w: 0.99876875}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_metacarpophalangeal_2
+      parentName: l_carpometacarpal_2
+      position: {x: -0.00009999275, y: -0.024300003, z: 0.0027000045}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_proximal_interphalangeal_2
+      parentName: l_metacarpophalangeal_2
+      position: {x: -0.00010000229, y: -0.016100006, z: 0.0003999996}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_distal_interphalangeal_2
+      parentName: l_carpal_proximal_interphalangeal_2
+      position: {x: -0.00050000194, y: -0.021300014, z: 0.001099998}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_midcarpal_3
+      parentName: L_Wrist
+      position: {x: -2.842171e-16, y: -0.037899997, z: -0.0057321214}
+      rotation: {x: 0.005259752, y: 0.000009289762, z: -0.00006148226, w: 0.9999862}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpometacarpal_3
+      parentName: l_midcarpal_3
+      position: {x: 0.000121393205, y: -0.05864044, z: 0.0015328693}
+      rotation: {x: -0.0071700034, y: -0.00031594597, z: -0.011518835, w: 0.9999079}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_metacarpophalangeal_3
+      parentName: l_carpometacarpal_3
+      position: {x: 0.0023999976, y: -0.025299987, z: -0.0007999992}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_proximal_interphalangeal_3
+      parentName: l_metacarpophalangeal_3
+      position: {x: 0.001800003, y: -0.019300003, z: -0.0011999988}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_distal_interphalangeal_3
+      parentName: l_carpal_proximal_interphalangeal_3
+      position: {x: -0.0005, y: -0.0219, z: -0.0016}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_midcarpal_4_5
+      parentName: L_Wrist
+      position: {x: -2.842171e-16, y: -0.037899997, z: -0.021544108}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpometacarpal_4
+      parentName: l_midcarpal_4_5
+      position: {x: -0.0033198642, y: -0.042761534, z: -0.0005081534}
+      rotation: {x: -0.009579618, y: 0.007262265, z: -0.048017107, w: 0.9987742}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_metacarpophalangeal_4
+      parentName: l_carpometacarpal_4
+      position: {x: 0.005999994, y: -0.022499999, z: -0.0046}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_proximal_interphalangeal_4
+      parentName: l_metacarpophalangeal_4
+      position: {x: 0.004000006, y: -0.015200042, z: -0.001968472}
+      rotation: {x: 0.019636804, y: 0.0025143444, z: 0.020487305, w: 0.9995941}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_distal_interphalangeal_4
+      parentName: l_carpal_proximal_interphalangeal_4
+      position: {x: 0.0038999969, y: -0.024499986, z: -0.00073123246}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpometacarpal_5
+      parentName: l_midcarpal_4_5
+      position: {x: -0.00025196074, y: -0.03206154, z: -0.015023965}
+      rotation: {x: -0.05765525, y: 0.018256985, z: -0.12071268, w: 0.9908436}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_metacarpophalangeal_5
+      parentName: l_carpometacarpal_5
+      position: {x: 0.006000004, y: -0.014111633, z: -0.005}
+      rotation: {x: 0.012190605, y: -0.04900808, z: 0.1529459, w: 0.9869434}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_proximal_interphalangeal_5
+      parentName: l_metacarpophalangeal_5
+      position: {x: -0.00013126373, y: -0.014388427, z: -0.0046}
+      rotation: {x: 0.077009, y: 0.006800568, z: -0.02346693, w: 0.99673104}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: l_carpal_distal_interphalangeal_5
+      parentName: l_carpal_proximal_interphalangeal_5
+      position: {x: 0.0014500448, y: -0.023047335, z: -0.001920719}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: R_Collar
+      parentName: Spine1
+      position: {x: 0.07, y: 0.28, z: 0.04}
+      rotation: {x: -0, y: -0, z: -3.1718997e-27, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: R_Shoulder
+      parentName: R_Collar
+      position: {x: 0.08, y: -0.02, z: 0}
+      rotation: {x: -0.000000010594403, y: 0.00000000824009, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1}
+    - name: R_Elbow
+      parentName: R_Shoulder
+      position: {x: -0, y: -0.22999999, z: 0}
+      rotation: {x: -0.000000002497124, y: -0, z: 6.8591934e-17, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: R_Wrist
+      parentName: R_Elbow
+      position: {x: -0, y: -0.24, z: 0}
+      rotation: {x: 8.3237583e-10, y: -0.000000026635995, z: -2.5981793e-16, w: 1}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1}
+    - name: r_midcarpal_1
+      parentName: R_Wrist
+      position: {x: 2.842171e-16, y: -0.0175039, z: 0.03152177}
+      rotation: {x: -0.117987625, y: 0.000038178812, z: 0.000029804578, w: 0.99301505}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpometacarpal_1
+      parentName: r_midcarpal_1
+      position: {x: -0.0000033035233, y: -0.01853775, z: 0.010541539}
+      rotation: {x: -0.21941262, y: -0.0000015684489, z: -0.000073882955, w: 0.9756322}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_metacarpophalangeal_1
+      parentName: r_carpometacarpal_1
+      position: {x: -0, y: -0.021562194, z: 0.00028028488}
+      rotation: {x: 0.011651575, y: 0.00000006827644, z: 0.00000074790967, w: 0.99993217}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_interphalangeal_1
+      parentName: r_metacarpophalangeal_1
+      position: {x: -0, y: -0.021375444, z: 0.0025407302}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_midcarpal_2
+      parentName: R_Wrist
+      position: {x: 2.842171e-16, y: -0.027545938, z: 0.018953843}
+      rotation: {x: -0, y: -0, z: -4.9630833e-24, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpometacarpal_2
+      parentName: r_midcarpal_2
+      position: {x: 0.002806158, y: -0.04525795, z: 0.0036897515}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_metacarpophalangeal_2
+      parentName: r_carpometacarpal_2
+      position: {x: 0.00055691716, y: -0.024300003, z: 0.0013037634}
+      rotation: {x: -0.020423952, y: 0.0069962065, z: 0.1391206, w: 0.9900402}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_proximal_interphalangeal_2
+      parentName: r_metacarpophalangeal_2
+      position: {x: -0.005429735, y: -0.016100006, z: 0.0000125265115}
+      rotation: {x: 0.008307871, y: -0.002909302, z: -0.13810825, w: 0.9903781}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_distal_interphalangeal_2
+      parentName: r_carpal_proximal_interphalangeal_2
+      position: {x: 0.00045755616, y: -0.021299992, z: 0.00047622694}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_midcarpal_3
+      parentName: R_Wrist
+      position: {x: 2.842171e-16, y: -0.028429499, z: 0.0035151052}
+      rotation: {x: -0.014804119, y: -0.0016668206, z: -0.01348093, w: 0.9997982}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpometacarpal_3
+      parentName: r_midcarpal_3
+      position: {x: 0.0061541935, y: -0.044374388, z: -0.0012715101}
+      rotation: {x: -0.0010480571, y: -0.0027755857, z: 0.09179238, w: 0.99577373}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_metacarpophalangeal_3
+      parentName: r_carpometacarpal_3
+      position: {x: -0.0030640601, y: -0.025299987, z: -0.0007999992}
+      rotation: {x: 0.009748089, y: -0.0016555709, z: 0.015021931, w: 0.99983835}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_proximal_interphalangeal_3
+      parentName: r_metacarpophalangeal_3
+      position: {x: -0.004287462, y: -0.019300003, z: 0.0006551504}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_distal_interphalangeal_3
+      parentName: r_carpal_proximal_interphalangeal_3
+      position: {x: -0.0023711824, y: -0.021900008, z: -0.00036052475}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_midcarpal_4_5
+      parentName: R_Wrist
+      position: {x: 2.842171e-16, y: -0.027476968, z: -0.015221428}
+      rotation: {x: -0, y: -0, z: -4.9630833e-24, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpometacarpal_4
+      parentName: r_midcarpal_4_5
+      position: {x: 0.0034418867, y: -0.041526947, z: -0.00063497544}
+      rotation: {x: -0.031797715, y: 0.001423878, z: 0.011516064, w: 0.99942696}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_metacarpophalangeal_4
+      parentName: r_carpometacarpal_4
+      position: {x: -0.0017775059, y: -0.022499999, z: -0.002125752}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_proximal_interphalangeal_4
+      parentName: r_metacarpophalangeal_4
+      position: {x: -0.00252985, y: -0.019807128, z: -0.0022485626}
+      rotation: {x: 0.010908541, y: -0.003529282, z: 0.018815251, w: 0.99975723}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_distal_interphalangeal_4
+      parentName: r_carpal_proximal_interphalangeal_4
+      position: {x: -0.004754058, y: -0.019892842, z: -0.0009751621}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpometacarpal_5
+      parentName: r_midcarpal_4_5
+      position: {x: -0.0054723835, y: -0.030826872, z: -0.014634975}
+      rotation: {x: -0.13378873, y: 0.0021435972, z: 0.017336994, w: 0.99085593}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_metacarpophalangeal_5
+      parentName: r_carpometacarpal_5
+      position: {x: -0.0009091186, y: -0.016300049, z: -0.005}
+      rotation: {x: 0.04103442, y: 0.010053912, z: -0.040236946, w: 0.99829656}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_proximal_interphalangeal_5
+      parentName: r_metacarpophalangeal_5
+      position: {x: 0.0011801338, y: -0.0137172695, z: -0.0022240262}
+      rotation: {x: -0.0027504785, y: -0.0052002002, z: 0.030614108, w: 0.99951404}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: r_carpal_distal_interphalangeal_5
+      parentName: r_carpal_proximal_interphalangeal_5
+      position: {x: -0.0009003916, y: -0.015482704, z: -0.0027108386}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: XBot_Skin
+      parentName: X_Bot_edit1_2motions(Clone)
+      position: {x: -0, y: 0, z: 0.06905196}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8741204, y: 0.8741204, z: 0.8741204}
+    - name: Beta_Joints
+      parentName: XBot_Skin
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Beta_Surface
+      parentName: XBot_Skin
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
