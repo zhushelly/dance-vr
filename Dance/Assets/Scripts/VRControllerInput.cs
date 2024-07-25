@@ -4,7 +4,7 @@ using RootMotion.FinalIK;
 
 public class VRControllerInput : MonoBehaviour
 {
-    public VRIK ik; // Reference to the VRIK component on your avatar
+    public VRIK ik; // Reference to the VRIK component on avatar
     public InputActionAsset inputActions; // Controller tracking Input Actions asset
 
     private InputAction leftHandPosition;
@@ -13,8 +13,8 @@ public class VRControllerInput : MonoBehaviour
     private InputAction rightHandRotation;
 
     // Corrective rotations - start with an assumption and adjust based on testing
-    private Quaternion leftHandCorrection = Quaternion.Euler(180, 0, 0);
-    private Quaternion rightHandCorrection = Quaternion.Euler(180, 0, 0); 
+    private Quaternion leftHandCorrection = Quaternion.Euler(210, 0, 0);
+    private Quaternion rightHandCorrection = Quaternion.Euler(210, 0, 0); 
 
     void Awake()
     {
