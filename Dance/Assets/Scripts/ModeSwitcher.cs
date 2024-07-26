@@ -7,6 +7,8 @@ public class ModeSwitcher : MonoBehaviour
     public GameObject leftHandController; // Reference to the Left Hand Controller
     public GameObject rightHandController; // Reference to the Right Hand Controller
     public GameObject headset;
+    public VRControllerInput vrControllerInput; // Reference to VRControllerInput script
+    public VRHeadInput vrHeadInput; // Reference to VRHeadInput script
 
     private bool isAnimationPlaying = true; // Track the current mode
     private ModeSwitchInput inputActions; // Input actions reference
@@ -45,7 +47,9 @@ public class ModeSwitcher : MonoBehaviour
         animator.enabled = true; // Enable the animator to play the animation
         leftHandController.SetActive(false); // Disable left hand controller input
         rightHandController.SetActive(false); // Disable right hand controller input
-        headset.SetActive(false);
+        headset.SetActive(false); // Disable headset input
+        vrControllerInput.enabled = false; // Disable VRControllerInput script
+        vrHeadInput.enabled = false; // Disable VRHeadInput script
         isAnimationPlaying = true;
     }
 
@@ -54,7 +58,13 @@ public class ModeSwitcher : MonoBehaviour
         animator.enabled = false; // Disable the animator to stop the animation
         leftHandController.SetActive(true); // Enable left hand controller input
         rightHandController.SetActive(true); // Enable right hand controller input
-        headset.SetActive(true);
+        headset.SetActive(true); // Enable headset input
+        vrControllerInput.enabled = true; // Enable VRControllerInput script
+        vrHeadInput.enabled = true; // Enable VRHeadInput script
         isAnimationPlaying = false;
+
+        // Reinitialize VR inputs to ensure they are correctly reset
+        vrControllerInput.Reinitialize();
+        vrHeadInput.Reinitialize();
     }
 }

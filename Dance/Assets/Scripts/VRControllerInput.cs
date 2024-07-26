@@ -13,12 +13,23 @@ public class VRControllerInput : MonoBehaviour
     private InputAction rightHandRotation;
 
     // Corrective rotations - start with an assumption and adjust based on testing
-    private Quaternion leftHandCorrection = Quaternion.Euler(210, 0, 0);
-    private Quaternion rightHandCorrection = Quaternion.Euler(210, 0, 0); 
+    private Quaternion leftHandCorrection = Quaternion.Euler(135, 0, 0);
+    private Quaternion rightHandCorrection = Quaternion.Euler(135, 0, 0); 
 
     void Awake()
     {
-        // Initialize actions from your input asset
+        InitializeActions(); // Initialize actions from your input asset
+    }
+
+    public void Reinitialize()
+    {
+        OnDisable(); // Disable actions
+        InitializeActions(); // Reinitialize actions
+        OnEnable(); // Enable actions
+    }
+
+    void InitializeActions()
+    {
         var actionMap = inputActions.FindActionMap("Hand Tracking");
         leftHandPosition = actionMap.FindAction("Left Hand Position");
         leftHandRotation = actionMap.FindAction("Left Hand Rotation");

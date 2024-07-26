@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 using RootMotion.FinalIK;
@@ -13,7 +12,18 @@ public class VRHeadInput : MonoBehaviour
 
     void Awake()
     {
-        // Initialize actions from your input asset
+        InitializeActions(); // Initialize actions from your input asset
+    }
+
+    public void Reinitialize()
+    {
+        OnDisable(); // Disable actions
+        InitializeActions(); // Reinitialize actions
+        OnEnable(); // Enable actions
+    }
+
+    void InitializeActions()
+    {
         var actionMap = inputActions.FindActionMap("Head Tracking");
         headPosition = actionMap.FindAction("Head Position");
         headRotation = actionMap.FindAction("Head Rotation");

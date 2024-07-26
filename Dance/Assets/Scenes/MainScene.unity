@@ -302,8 +302,8 @@ MonoBehaviour:
     leftLeg:
       bones: []
       target: {fileID: 0}
-      positionWeight: 1
-      rotationWeight: 1
+      positionWeight: 0
+      rotationWeight: 0
       bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
@@ -319,8 +319,8 @@ MonoBehaviour:
     rightLeg:
       bones: []
       target: {fileID: 0}
-      positionWeight: 1
-      rotationWeight: 1
+      positionWeight: 0
+      rotationWeight: 0
       bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
       useAnimatedBendNormal: 0
     locomotion:
       mode: 0
-      weight: 1
+      weight: 0
       moveThreshold: 0.3
       animationHeader: 0
       minAnimationSpeed: 0.2
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159555239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d286e3dc841a0a4da7ea821d647ec3d, type: 3}
   m_Name: 
