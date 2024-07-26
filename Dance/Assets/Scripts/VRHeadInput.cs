@@ -17,7 +17,6 @@ public class VRHeadInput : MonoBehaviour
 
     public void Reinitialize()
     {
-        OnDisable(); // Disable actions
         InitializeActions(); // Reinitialize actions
         OnEnable(); // Enable actions
     }

@@ -62,9 +62,5 @@ public class ModeSwitcher : MonoBehaviour
         vrControllerInput.enabled = true; // Enable VRControllerInput script
         vrHeadInput.enabled = true; // Enable VRHeadInput script
         isAnimationPlaying = false;
-
-        // Reinitialize VR inputs to ensure they are correctly reset
-        vrControllerInput.Reinitialize();
-        vrHeadInput.Reinitialize();
     }
 }

@@ -14,7 +14,7 @@ public class VRControllerInput : MonoBehaviour
 
     // Corrective rotations - start with an assumption and adjust based on testing
     private Quaternion leftHandCorrection = Quaternion.Euler(135, 0, 0);
-    private Quaternion rightHandCorrection = Quaternion.Euler(135, 0, 0); 
+    private Quaternion rightHandCorrection = Quaternion.Euler(135, 0, 0);
 
     void Awake()
     {
@@ -23,7 +23,6 @@ public class VRControllerInput : MonoBehaviour
 
     public void Reinitialize()
     {
-        OnDisable(); // Disable actions
         InitializeActions(); // Reinitialize actions
         OnEnable(); // Enable actions
     }
