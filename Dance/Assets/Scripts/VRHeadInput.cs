@@ -12,17 +12,6 @@ public class VRHeadInput : MonoBehaviour
 
     void Awake()
     {
-        InitializeActions(); // Initialize actions from your input asset
-    }
-
-    public void Reinitialize()
-    {
-        InitializeActions(); // Reinitialize actions
-        OnEnable(); // Enable actions
-    }
-
-    void InitializeActions()
-    {
         var actionMap = inputActions.FindActionMap("Head Tracking");
         headPosition = actionMap.FindAction("Head Position");
         headRotation = actionMap.FindAction("Head Rotation");

@@ -18,17 +18,6 @@ public class VRControllerInput : MonoBehaviour
 
     void Awake()
     {
-        InitializeActions(); // Initialize actions from your input asset
-    }
-
-    public void Reinitialize()
-    {
-        InitializeActions(); // Reinitialize actions
-        OnEnable(); // Enable actions
-    }
-
-    void InitializeActions()
-    {
         var actionMap = inputActions.FindActionMap("Hand Tracking");
         leftHandPosition = actionMap.FindAction("Left Hand Position");
         leftHandRotation = actionMap.FindAction("Left Hand Rotation");

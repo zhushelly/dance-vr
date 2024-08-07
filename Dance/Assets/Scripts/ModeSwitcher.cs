@@ -1,66 +1,64 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class ModeSwitcher : MonoBehaviour
 {
-    public Animator animator; // Reference to the Animator component
-    public GameObject leftHandController; // Reference to the Left Hand Controller
-    public GameObject rightHandController; // Reference to the Right Hand Controller
+    public Animator animator;
+    public GameObject leftController;
+    public GameObject rightController;
     public GameObject headset;
-    public VRControllerInput vrControllerInput; // Reference to VRControllerInput script
-    public VRHeadInput vrHeadInput; // Reference to VRHeadInput script
-
-    private bool isAnimationPlaying = true; // Track the current mode
-    private ModeSwitchInput inputActions; // Input actions reference
-
-    void Awake()
+    private ModeSwitchInput inputActions;
+    private bool isAnimationPlaying = true;
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+    private void Awake()
     {
-        inputActions = new ModeSwitchInput(); // Initialize input actions
+        // Save the original position and rotation of the character
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
+        // Initialize input actions
+        inputActions = new ModeSwitchInput();
     }
-
-    void OnEnable()
+    private void OnEnable()
     {
-        inputActions.PlayerControls.ToggleMode.performed += OnToggleMode; // Register callback
-        inputActions.PlayerControls.Enable(); // Enable the action map
+        // Register callback for the toggle mode action
+        inputActions.PlayerControls.ToggleMode.performed += OnToggleMode;
+        inputActions.PlayerControls.Enable();
     }
-
-    void OnDisable()
+    private void OnDisable()
     {
-        inputActions.PlayerControls.ToggleMode.performed -= OnToggleMode; // Unregister callback
-        inputActions.PlayerControls.Disable(); // Disable the action map
+        // Unregister callback for the toggle mode action
+        inputActions.PlayerControls.ToggleMode.performed -= OnToggleMode;
+        inputActions.PlayerControls.Disable();
     }
-
-    void OnToggleMode(InputAction.CallbackContext context)
+    private void OnToggleMode(InputAction.CallbackContext context)
     {
         if (isAnimationPlaying)
         {
             SwitchToVRMode();
+            // Restore original position and rotation in VR mode
+            transform.position = originalPosition;
+            transform.rotation = originalRotation;
         }
         else
         {
             SwitchToAnimationMode();
         }
     }
-
     void SwitchToAnimationMode()
     {
         animator.enabled = true; // Enable the animator to play the animation
-        leftHandController.SetActive(false); // Disable left hand controller input
-        rightHandController.SetActive(false); // Disable right hand controller input
-        headset.SetActive(false); // Disable headset input
-        vrControllerInput.enabled = false; // Disable VRControllerInput script
-        vrHeadInput.enabled = false; // Disable VRHeadInput script
+        leftController.SetActive(false);
+        rightController.SetActive(false); 
+        headset.SetActive(false);
         isAnimationPlaying = true;
     }
-
     void SwitchToVRMode()
     {
         animator.enabled = false; // Disable the animator to stop the animation
-        leftHandController.SetActive(true); // Enable left hand controller input
-        rightHandController.SetActive(true); // Enable right hand controller input
-        headset.SetActive(true); // Enable headset input
-        vrControllerInput.enabled = true; // Enable VRControllerInput script
-        vrHeadInput.enabled = true; // Enable VRHeadInput script
+        leftController.SetActive(true); // Enable left hand controller input
+        rightController.SetActive(true); // Enable right hand controller input
+        headset.SetActive(true);
         isAnimationPlaying = false;
     }
 }
+
