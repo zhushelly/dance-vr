@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
+
 public class MotionPlayback : MonoBehaviour
 {
     public Transform leftController;
@@ -10,6 +11,7 @@ public class MotionPlayback : MonoBehaviour
     private int currentIndex = 0;
     private float timer = 0f;
     private bool isPlaying = false;
+    
     void Start()
     {
         LoadDataFromFile();

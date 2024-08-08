@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
+
 public class MotionRecorder : MonoBehaviour
 {
     public Transform leftController;
@@ -9,6 +10,7 @@ public class MotionRecorder : MonoBehaviour
     private List<string> motionData = new List<string>();
     private bool isRecording = false;
     private float timer = 0f;
+    
     void Update()
     {
         if (isRecording)
