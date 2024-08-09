@@ -1,0 +1,54 @@
+{
+    "name": "RecordControl",
+    "maps": [
+        {
+            "name": "GamePlay",
+            "id": "72468990-df93-4eb7-8436-0a25b6211245",
+            "actions": [
+                {
+                    "name": "StartRecording",
+                    "type": "Button",
+                    "id": "2eb7dd88-d72c-4c06-8b9b-6b13d033c5ea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "StopRecording",
+                    "type": "Button",
+                    "id": "8ba824e9-9238-4e52-a112-06d722f334ac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "99577037-5372-4927-af6e-c1b33fb68a33",
+                    "path": "<OculusTouchController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartRecording",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cc6c7c0d-1ab1-4e0b-8b29-f6f8fcf8b931",
+                    "path": "<OculusTouchController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StopRecording",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

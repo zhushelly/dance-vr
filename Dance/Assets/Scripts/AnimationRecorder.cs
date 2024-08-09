@@ -23,8 +23,7 @@ public class AnimationRecorder : MonoBehaviour {
 
     Transform[] recordObjs;
     SkinnedMeshRenderer[] blendShapeObjs;
-    UnityObjectAnimation[] objRecorders;
-    List<UnityBlendShapeAnimation> blendShapeRecorders;
+    List<SkinnedMeshRenderer> blendShapeRecorders;
 
     bool isStart = false;
     float nowTime = 0.0f;
@@ -38,25 +37,21 @@ public class AnimationRecorder : MonoBehaviour {
 
     void SetupRecorders () {
         recordObjs = gameObject.GetComponentsInChildren<Transform>();
-        objRecorders = new UnityObjectAnimation[recordObjs.Length];
-        blendShapeRecorders = new List<UnityBlendShapeAnimation>();
+        blendShapeRecorders = new List<SkinnedMeshRenderer>();
 
         frameIndex = 0;
         nowTime = 0.0f;
 
         for (int i = 0; i < recordObjs.Length; i++) {
             string path = AnimationRecorderHelper.GetTransformPathName(transform, recordObjs[i]);
-            objRecorders[i] = new UnityObjectAnimation(path, recordObjs[i]);
 
             // check if there’s blendShape
             if (recordBlendShape) {
-                if (recordObjs[i].GetComponent<SkinnedMeshRenderer>()) {
-                    SkinnedMeshRenderer tempSkinMeshRenderer = recordObjs[i].GetComponent<SkinnedMeshRenderer>();
+                SkinnedMeshRenderer tempSkinMeshRenderer = recordObjs[i].GetComponent<SkinnedMeshRenderer>();
 
-                    // there is blendShape exist
-                    if (tempSkinMeshRenderer.sharedMesh.blendShapeCount > 0) {
-                        blendShapeRecorders.Add(new UnityBlendShapeAnimation(path, tempSkinMeshRenderer));
-                    }
+                // if blendShape exists
+                if (tempSkinMeshRenderer != null && tempSkinMeshRenderer.sharedMesh.blendShapeCount > 0) {
+                    blendShapeRecorders.Add(tempSkinMeshRenderer);
                 }
             }
         }
@@ -75,14 +70,13 @@ public class AnimationRecorder : MonoBehaviour {
         if (isStart) {
             nowTime += Time.deltaTime;
 
-            foreach (var recorder in objRecorders) {
-                recorder.AddFrame(nowTime);
+            foreach (var recorder in recordObjs) {
                 WriteTransformDataToText(recorder);
             }
 
             if (recordBlendShape) {
                 foreach (var recorder in blendShapeRecorders) {
-                    recorder.AddFrame(nowTime);
+                    // Handle blendshape recording if needed
                 }
             }
         }
@@ -102,10 +96,10 @@ public class AnimationRecorder : MonoBehaviour {
         fileIndex++;
     }
 
-    void WriteTransformDataToText(UnityObjectAnimation recorder) {
+    void WriteTransformDataToText(Transform recorder) {
         if (writer != null) {
-            string data = $"{recorder.pathName},{recorder.transform.position.x},{recorder.transform.position.y},{recorder.transform.position.z}," +
-                          $"{recorder.transform.rotation.x},{recorder.transform.rotation.y},{recorder.transform.rotation.z},{recorder.transform.rotation.w}";
+            string data = $"{recorder.name},{recorder.position.x},{recorder.position.y},{recorder.position.z}," +
+                          $"{recorder.rotation.x},{recorder.rotation.y},{recorder.rotation.z},{recorder.rotation.w}";
             writer.WriteLine(data);
         }
     }
