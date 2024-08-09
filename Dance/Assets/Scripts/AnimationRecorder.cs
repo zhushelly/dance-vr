@@ -6,7 +6,7 @@ using System.IO;
 public class AnimationRecorder : MonoBehaviour {
 
     // save file path
-    public string savePath;
+    // public string savePath;
     public string fileName = "motiondata";
 
     // use it when saving multiple files
