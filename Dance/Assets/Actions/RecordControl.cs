@@ -37,9 +37,9 @@ public partial class @RecordControl: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""StopRecording"",
+                    ""name"": ""StartPlayback"",
                     ""type"": ""Button"",
-                    ""id"": ""8ba824e9-9238-4e52-a112-06d722f334ac"",
+                    ""id"": ""9594a839-ea25-439c-9be2-6c1fffdaf859"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -60,12 +60,12 @@ public partial class @RecordControl: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cc6c7c0d-1ab1-4e0b-8b29-f6f8fcf8b931"",
+                    ""id"": ""598382f1-f22a-42d7-a380-4321f2910d01"",
                     ""path"": ""<OculusTouchController>{LeftHand}/secondaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""StopRecording"",
+                    ""action"": ""StartPlayback"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -77,7 +77,7 @@ public partial class @RecordControl: IInputActionCollection2, IDisposable
         // GamePlay
         m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
         m_GamePlay_StartRecording = m_GamePlay.FindAction("StartRecording", throwIfNotFound: true);
-        m_GamePlay_StopRecording = m_GamePlay.FindAction("StopRecording", throwIfNotFound: true);
+        m_GamePlay_StartPlayback = m_GamePlay.FindAction("StartPlayback", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -140,13 +140,13 @@ public partial class @RecordControl: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GamePlay;
     private List<IGamePlayActions> m_GamePlayActionsCallbackInterfaces = new List<IGamePlayActions>();
     private readonly InputAction m_GamePlay_StartRecording;
-    private readonly InputAction m_GamePlay_StopRecording;
+    private readonly InputAction m_GamePlay_StartPlayback;
     public struct GamePlayActions
     {
         private @RecordControl m_Wrapper;
         public GamePlayActions(@RecordControl wrapper) { m_Wrapper = wrapper; }
         public InputAction @StartRecording => m_Wrapper.m_GamePlay_StartRecording;
-        public InputAction @StopRecording => m_Wrapper.m_GamePlay_StopRecording;
+        public InputAction @StartPlayback => m_Wrapper.m_GamePlay_StartPlayback;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -159,9 +159,9 @@ public partial class @RecordControl: IInputActionCollection2, IDisposable
             @StartRecording.started += instance.OnStartRecording;
             @StartRecording.performed += instance.OnStartRecording;
             @StartRecording.canceled += instance.OnStartRecording;
-            @StopRecording.started += instance.OnStopRecording;
-            @StopRecording.performed += instance.OnStopRecording;
-            @StopRecording.canceled += instance.OnStopRecording;
+            @StartPlayback.started += instance.OnStartPlayback;
+            @StartPlayback.performed += instance.OnStartPlayback;
+            @StartPlayback.canceled += instance.OnStartPlayback;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -169,9 +169,9 @@ public partial class @RecordControl: IInputActionCollection2, IDisposable
             @StartRecording.started -= instance.OnStartRecording;
             @StartRecording.performed -= instance.OnStartRecording;
             @StartRecording.canceled -= instance.OnStartRecording;
-            @StopRecording.started -= instance.OnStopRecording;
-            @StopRecording.performed -= instance.OnStopRecording;
-            @StopRecording.canceled -= instance.OnStopRecording;
+            @StartPlayback.started -= instance.OnStartPlayback;
+            @StartPlayback.performed -= instance.OnStartPlayback;
+            @StartPlayback.canceled -= instance.OnStartPlayback;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -192,6 +192,6 @@ public partial class @RecordControl: IInputActionCollection2, IDisposable
     public interface IGamePlayActions
     {
         void OnStartRecording(InputAction.CallbackContext context);
-        void OnStopRecording(InputAction.CallbackContext context);
+        void OnStartPlayback(InputAction.CallbackContext context);
     }
 }

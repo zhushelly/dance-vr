@@ -15,9 +15,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "StopRecording",
+                    "name": "StartPlayback",
                     "type": "Button",
-                    "id": "8ba824e9-9238-4e52-a112-06d722f334ac",
+                    "id": "9594a839-ea25-439c-9be2-6c1fffdaf859",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -38,12 +38,12 @@
                 },
                 {
                     "name": "",
-                    "id": "cc6c7c0d-1ab1-4e0b-8b29-f6f8fcf8b931",
+                    "id": "598382f1-f22a-42d7-a380-4321f2910d01",
                     "path": "<OculusTouchController>{LeftHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "StopRecording",
+                    "action": "StartPlayback",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

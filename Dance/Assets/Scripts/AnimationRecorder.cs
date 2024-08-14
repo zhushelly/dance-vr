@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -6,14 +7,15 @@ using System.IO;
 public class AnimationRecorder : MonoBehaviour {
 
     // save file path
-    // public string savePath;
+    public string savePath;
     public string fileName = "motiondata";
 
     // use it when saving multiple files
     int fileIndex = 0;
 
-    public KeyCode startRecordKey = KeyCode.Q;
-    public KeyCode stopRecordKey = KeyCode.W;
+    // Input Action asset reference
+    public InputActionAsset inputActionAsset;
+    private InputAction toggleRecordingAction;
 
     public bool recordLimitedFrames = false;
     public int recordFrames = 1000;
@@ -25,7 +27,7 @@ public class AnimationRecorder : MonoBehaviour {
     SkinnedMeshRenderer[] blendShapeObjs;
     List<SkinnedMeshRenderer> blendShapeRecorders;
 
-    bool isStart = false;
+    bool isRecording = false;
     float nowTime = 0.0f;
 
     StreamWriter writer;
@@ -33,6 +35,15 @@ public class AnimationRecorder : MonoBehaviour {
     // Use this for initialization
     void Start () {
         SetupRecorders ();
+
+        // Find action in the input action asset
+        toggleRecordingAction = inputActionAsset.FindActionMap("GamePlay").FindAction("StartRecording");
+
+        // Enable action
+        toggleRecordingAction.Enable();
+
+        // Bind action to method
+        toggleRecordingAction.performed += _ => ToggleRecording();
     }
 
     void SetupRecorders () {
@@ -59,15 +70,7 @@ public class AnimationRecorder : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown(startRecordKey)) {
-            StartRecording();
-        }
-
-        if (Input.GetKeyDown(stopRecordKey)) {
-            StopRecording();
-        }
-
-        if (isStart) {
+        if (isRecording) {
             nowTime += Time.deltaTime;
 
             foreach (var recorder in recordObjs) {
@@ -82,16 +85,24 @@ public class AnimationRecorder : MonoBehaviour {
         }
     }
 
+    public void ToggleRecording() {
+        if (isRecording) {
+            StopRecording();
+        } else {
+            StartRecording();
+        }
+    }
+
     public void StartRecording () {
         Debug.Log("Start Recorder");
-        isStart = true;
+        isRecording = true;
         string filePath = Path.Combine(savePath, fileName + "-" + fileIndex + ".txt");
         writer = new StreamWriter(filePath, false);
     }
 
     public void StopRecording () {
         Debug.Log("End Record, data saved to file");
-        isStart = false;
+        isRecording = false;
         writer.Close();
         fileIndex++;
     }
