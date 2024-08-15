@@ -5,7 +5,7 @@ using System.IO;
 
 public class AnimationPlayback : MonoBehaviour {
 
-    public string loadPath;
+    // public string loadPath;
     public string fileName = "motiondata";
 
     // Input Action asset reference
@@ -46,7 +46,7 @@ public class AnimationPlayback : MonoBehaviour {
     }
 
     void LoadData() {
-        string filePath = Path.Combine(loadPath, fileName + ".txt");
+        string filePath = Path.Combine(Application.persistentDataPath, fileName + ".txt");
 
         if (File.Exists(filePath)) {
             using (StreamReader reader = new StreamReader(filePath)) {

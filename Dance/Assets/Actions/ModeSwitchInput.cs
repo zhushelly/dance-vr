@@ -41,7 +41,7 @@ public partial class @ModeSwitchInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5edbeedd-c72f-4f3a-acdd-2371eed8cfe0"",
-                    ""path"": ""<OculusTouchController>/primaryButton"",
+                    ""path"": ""<OculusTouchController>{RightHand}/primaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

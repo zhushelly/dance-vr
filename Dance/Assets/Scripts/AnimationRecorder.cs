@@ -1,19 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
 public class AnimationRecorder : MonoBehaviour {
 
-    // save file path
-    public string savePath;
     public string fileName = "motiondata";
-
-    // use it when saving multiple files
     int fileIndex = 0;
 
-    // Input Action asset reference
     public InputActionAsset inputActionAsset;
     private InputAction toggleRecordingAction;
 
@@ -32,17 +29,14 @@ public class AnimationRecorder : MonoBehaviour {
 
     StreamWriter writer;
 
-    // Use this for initialization
+    // XR controller reference for haptic feedback
+    public XRBaseController leftController;
+
     void Start () {
         SetupRecorders ();
 
-        // Find action in the input action asset
         toggleRecordingAction = inputActionAsset.FindActionMap("GamePlay").FindAction("StartRecording");
-
-        // Enable action
         toggleRecordingAction.Enable();
-
-        // Bind action to method
         toggleRecordingAction.performed += _ => ToggleRecording();
     }
 
@@ -56,11 +50,9 @@ public class AnimationRecorder : MonoBehaviour {
         for (int i = 0; i < recordObjs.Length; i++) {
             string path = AnimationRecorderHelper.GetTransformPathName(transform, recordObjs[i]);
 
-            // check if there’s blendShape
             if (recordBlendShape) {
                 SkinnedMeshRenderer tempSkinMeshRenderer = recordObjs[i].GetComponent<SkinnedMeshRenderer>();
 
-                // if blendShape exists
                 if (tempSkinMeshRenderer != null && tempSkinMeshRenderer.sharedMesh.blendShapeCount > 0) {
                     blendShapeRecorders.Add(tempSkinMeshRenderer);
                 }
@@ -68,7 +60,6 @@ public class AnimationRecorder : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
     void Update () {
         if (isRecording) {
             nowTime += Time.deltaTime;
@@ -96,8 +87,11 @@ public class AnimationRecorder : MonoBehaviour {
     public void StartRecording () {
         Debug.Log("Start Recorder");
         isRecording = true;
-        string filePath = Path.Combine(savePath, fileName + "-" + fileIndex + ".txt");
+        string filePath = Path.Combine(Application.persistentDataPath, fileName + "-" + fileIndex + ".txt");
         writer = new StreamWriter(filePath, false);
+
+        // Trigger haptic feedback on recording start
+        SendHapticFeedback(0.5f, 0.2f); // Adjust intensity and duration as needed
     }
 
     public void StopRecording () {
@@ -105,6 +99,9 @@ public class AnimationRecorder : MonoBehaviour {
         isRecording = false;
         writer.Close();
         fileIndex++;
+
+        // Trigger haptic feedback on recording stop
+        SendHapticFeedback(0.3f, 0.2f); // Adjust intensity and duration as needed
     }
 
     void WriteTransformDataToText(Transform recorder) {
@@ -118,6 +115,12 @@ public class AnimationRecorder : MonoBehaviour {
     void OnApplicationQuit() {
         if (writer != null) {
             writer.Close();
+        }
+    }
+
+    void SendHapticFeedback(float intensity, float duration) {
+        if (leftController != null) {
+            leftController.SendHapticImpulse(intensity, duration);
         }
     }
 }

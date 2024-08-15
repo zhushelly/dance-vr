@@ -4682,13 +4682,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39752dff51045f469467459b3d33390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savePath: D:/Shelly Zhu/MotionData/
   fileName: motiondata
   inputActionAsset: {fileID: -944628639613478452, guid: 80d8fcc520f4ea9468b328204a3bed09,
     type: 3}
   recordLimitedFrames: 0
   recordFrames: 1000
   recordBlendShape: 0
+  leftController: {fileID: 1139872930}
 --- !u!114 &1621289977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4701,7 +4701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13b61b86e5ae44f8fc07eccd26a678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadPath: D:/Shelly Zhu/MotionData/
   fileName: motiondata
   inputActionAsset: {fileID: -944628639613478452, guid: 80d8fcc520f4ea9468b328204a3bed09,
     type: 3}
