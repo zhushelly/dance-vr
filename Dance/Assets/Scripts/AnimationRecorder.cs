@@ -91,7 +91,7 @@ public class AnimationRecorder : MonoBehaviour {
         writer = new StreamWriter(filePath, false);
 
         // Trigger haptic feedback on recording start
-        SendHapticFeedback(0.5f, 0.2f); // Adjust intensity and duration as needed
+        SendHapticFeedback(0.5f, 0.5f); // Adjust intensity and duration as needed
     }
 
     public void StopRecording () {
@@ -101,7 +101,7 @@ public class AnimationRecorder : MonoBehaviour {
         fileIndex++;
 
         // Trigger haptic feedback on recording stop
-        SendHapticFeedback(0.3f, 0.2f); // Adjust intensity and duration as needed
+        SendHapticFeedback(0.5f, 0.5f); // Adjust intensity and duration as needed
     }
 
     void WriteTransformDataToText(Transform recorder) {

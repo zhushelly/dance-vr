@@ -1,0 +1,34 @@
+{
+    "name": "TestFileWrite",
+    "maps": [
+        {
+            "name": "Control",
+            "id": "b91929a1-ffd1-4ff0-81cc-75a2a3cfe401",
+            "actions": [
+                {
+                    "name": "Write",
+                    "type": "Button",
+                    "id": "30f6c8c4-80e6-4d2f-b777-f74a4bd4c1bb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "203bb528-87f6-42b7-bb4d-75716d1d17af",
+                    "path": "<OculusTouchController>/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Write",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
