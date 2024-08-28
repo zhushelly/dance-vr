@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;  // Add this line to use TextMeshPro
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -29,8 +30,22 @@ public class AnimationRecorder : MonoBehaviour {
 
     StreamWriter writer;
 
-    // XR controller reference for haptic feedback
-    public XRBaseController leftController;
+    // Add a public reference to the TextMeshPro component
+    public TextMeshPro recordingText;
+
+    // List of joint names in the order as per the output format
+    private readonly string[] jointOrder = new string[] {
+        "Pelvis", "L_Hip", "R_Hip", "Spine1", "L_Knee", "R_Knee", "Spine2", "L_Ankle", "R_Ankle", 
+        "Spine3", "L_Foot", "R_Foot", "Neck", "L_Collar", "R_Collar", "Head", "L_Shoulder", 
+        "R_Shoulder", "L_Elbow", "R_Elbow", "L_Wrist", "R_Wrist", "L_Foot_End", "R_Foot_End", 
+        "Head_End", "L_Hand", "R_Hand"
+    };
+
+    private readonly string[] rotationJointNames = new string[] {
+        "Pelvis", "L_Hip", "R_Hip", "Spine1", "L_Knee", "R_Knee", "Spine2", "L_Ankle", "R_Ankle", 
+        "Spine3", "L_Foot", "R_Foot", "Neck", "L_Collar", "R_Collar", "Head", "L_Shoulder", 
+        "R_Shoulder", "L_Elbow", "R_Elbow", "L_Wrist", "R_Wrist"
+    };
 
     void Start () {
         SetupRecorders ();
@@ -63,16 +78,7 @@ public class AnimationRecorder : MonoBehaviour {
     void Update () {
         if (isRecording) {
             nowTime += Time.deltaTime;
-
-            foreach (var recorder in recordObjs) {
-                WriteTransformDataToText(recorder);
-            }
-
-            if (recordBlendShape) {
-                foreach (var recorder in blendShapeRecorders) {
-                    // Handle blendshape recording if needed
-                }
-            }
+            WriteFrameDataToText();
         }
     }
 
@@ -89,9 +95,11 @@ public class AnimationRecorder : MonoBehaviour {
         isRecording = true;
         string filePath = Path.Combine(Application.persistentDataPath, fileName + "-" + fileIndex + ".txt");
         writer = new StreamWriter(filePath, false);
-
-        // Trigger haptic feedback on recording start
-        SendHapticFeedback(0.5f, 0.5f); // Adjust intensity and duration as needed
+        
+        // Update the recording text
+        if (recordingText != null) {
+            recordingText.text = "Recording Started";
+        }
     }
 
     public void StopRecording () {
@@ -99,28 +107,55 @@ public class AnimationRecorder : MonoBehaviour {
         isRecording = false;
         writer.Close();
         fileIndex++;
-
-        // Trigger haptic feedback on recording stop
-        SendHapticFeedback(0.5f, 0.5f); // Adjust intensity and duration as needed
+        
+        // Update the recording text
+        if (recordingText != null) {
+            recordingText.text = "Recording Stopped";
+        }
     }
 
-    void WriteTransformDataToText(Transform recorder) {
+    void WriteFrameDataToText() {
         if (writer != null) {
-            string data = $"{recorder.name},{recorder.position.x},{recorder.position.y},{recorder.position.z}," +
-                          $"{recorder.rotation.x},{recorder.rotation.y},{recorder.rotation.z},{recorder.rotation.w}";
-            writer.WriteLine(data);
+            string frameData = "";
+
+            // Write rotations (quaternions) for the first 22 joints
+            foreach (var jointName in rotationJointNames) {
+                Transform jointTransform = GetTransformByName(jointName);
+                if (jointTransform != null) {
+                    frameData += $"{jointTransform.rotation.x},{jointTransform.rotation.y},{jointTransform.rotation.z},{jointTransform.rotation.w},";
+                } else {
+                    frameData += "0,0,0,0,"; // Fallback in case of missing joint
+                }
+            }
+
+            // Write positions (vector3) for all 27 joints
+            foreach (var jointName in jointOrder) {
+                Transform jointTransform = GetTransformByName(jointName);
+                if (jointTransform != null) {
+                    frameData += $"{jointTransform.position.x},{jointTransform.position.y},{jointTransform.position.z},";
+                } else {
+                    frameData += "0,0,0,"; // Fallback in case of missing joint
+                }
+            }
+
+            // Remove the last comma and write the data to the file
+            frameData = frameData.TrimEnd(',');
+            writer.WriteLine(frameData);
         }
+    }
+
+    Transform GetTransformByName(string name) {
+        foreach (var transform in recordObjs) {
+            if (transform.name == name) {
+                return transform;
+            }
+        }
+        return null;
     }
 
     void OnApplicationQuit() {
         if (writer != null) {
             writer.Close();
-        }
-    }
-
-    void SendHapticFeedback(float intensity, float duration) {
-        if (leftController != null) {
-            leftController.SendHapticImpulse(intensity, duration);
         }
     }
 }
