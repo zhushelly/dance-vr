@@ -1,8 +1,10 @@
+// AnimationRecorder.cs
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
-using TMPro;  // Add this line to use TextMeshPro
+using TMPro;  
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -35,19 +37,21 @@ public class AnimationRecorder : MonoBehaviour {
 
     // List of joint names in the order as per the output format
     private readonly string[] jointOrder = new string[] {
-        "Pelvis", "L_Hip", "R_Hip", "Spine1", "L_Knee", "R_Knee", "Spine2", "L_Ankle", "R_Ankle", 
-        "Spine3", "L_Foot", "R_Foot", "Neck", "L_Collar", "R_Collar", "Head", "L_Shoulder", 
-        "R_Shoulder", "L_Elbow", "R_Elbow", "L_Wrist", "R_Wrist", "L_Foot_End", "R_Foot_End", 
-        "Head_End", "L_Hand", "R_Hand"
+        "Pelvis", "R_Hip", "L_Hip", "Spine1", "R_Knee", "L_Knee", "Spine2", "R_Ankle", "L_Ankle", 
+        "Spine3", "R_Foot", "L_Foot", "Neck", "R_Collar", "L_Collar", "Head", "R_Shoulder", 
+        "L_Shoulder", "R_Elbow", "L_Elbow", "R_Wrist", "L_Wrist", "Head_End", "R_Foot_End", "L_Foot_End", 
+        "R_Hand", "L_Hand"
     };
 
     private readonly string[] rotationJointNames = new string[] {
-        "Pelvis", "L_Hip", "R_Hip", "Spine1", "L_Knee", "R_Knee", "Spine2", "L_Ankle", "R_Ankle", 
-        "Spine3", "L_Foot", "R_Foot", "Neck", "L_Collar", "R_Collar", "Head", "L_Shoulder", 
-        "R_Shoulder", "L_Elbow", "R_Elbow", "L_Wrist", "R_Wrist"
+        "Pelvis", "R_Hip", "L_Hip", "Spine1", "R_Knee", "L_Knee", "Spine2", "R_Ankle", "L_Ankle", 
+        "Spine3", "R_Foot", "L_Foot", "Neck", "R_Collar", "L_Collar", "Head", "R_Shoulder", 
+        "L_Shoulder", "R_Elbow", "L_Elbow", "R_Wrist", "L_Wrist"
     };
 
     void Start () {
+        // Application.targetFrameRate = 30;
+
         SetupRecorders ();
 
         toggleRecordingAction = inputActionAsset.FindActionMap("GamePlay").FindAction("StartRecording");
