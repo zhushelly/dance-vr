@@ -13,8 +13,8 @@ public class VRControllerInput : MonoBehaviour
     private InputAction rightHandRotation;
 
     // Corrective rotations - start with an assumption and adjust based on testing
-    // private Quaternion leftHandCorrection = Quaternion.Euler(0, 0, 270);
-    // private Quaternion rightHandCorrection = Quaternion.Euler(0, 0, 270);
+    private Quaternion leftHandCorrection = Quaternion.Euler(0, 180, 270);
+    private Quaternion rightHandCorrection = Quaternion.Euler(0, 180, 270);
 
     void Awake()
     {
@@ -49,12 +49,12 @@ public class VRControllerInput : MonoBehaviour
         if (ik.solver.leftArm.target != null)
         {
             ik.solver.leftArm.target.position = leftHandPosition.ReadValue<Vector3>();
-            ik.solver.leftArm.target.rotation = leftHandRotation.ReadValue<Quaternion>();
+            ik.solver.leftArm.target.rotation = leftHandRotation.ReadValue<Quaternion>() * leftHandCorrection;
         }
         if (ik.solver.rightArm.target != null)
         {
             ik.solver.rightArm.target.position = rightHandPosition.ReadValue<Vector3>();
-            ik.solver.rightArm.target.rotation = rightHandRotation.ReadValue<Quaternion>();
+            ik.solver.rightArm.target.rotation = rightHandRotation.ReadValue<Quaternion>() * rightHandCorrection;
         }
     }
 }

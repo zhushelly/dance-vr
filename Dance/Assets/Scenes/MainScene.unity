@@ -729,7 +729,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159555239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 074601db2ed18704183004cb040ca907, type: 3}
   m_Name: 
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159555239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4794923b04673b140860b5608e5ab229, type: 3}
   m_Name: 
@@ -3378,7 +3378,7 @@ MonoBehaviour:
       headTarget: {fileID: 542503465}
       positionWeight: 1
       rotationWeight: 1
-      headClampWeight: 0.6
+      headClampWeight: 0.4
       minHeadHeight: 0.8
       useAnimatedHeadHeightWeight: 0
       useAnimatedHeadHeightRange: 0.1
@@ -3410,7 +3410,7 @@ MonoBehaviour:
       bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
-      wristToPalmAxis: {x: -1, y: -0, z: -0}
+      wristToPalmAxis: {x: 0, y: 1, z: -0}
       palmToThumbAxis: {x: 1, y: 0, z: 0}
       armLengthMlp: 1
       stretchCurve:
@@ -3432,8 +3432,8 @@ MonoBehaviour:
       bendGoal: {fileID: 0}
       bendGoalWeight: 0
       swivelOffset: 0
-      wristToPalmAxis: {x: -1, y: 0, z: 0}
-      palmToThumbAxis: {x: 1, y: 0, z: 0}
+      wristToPalmAxis: {x: 0, y: 1, z: 0}
+      palmToThumbAxis: {x: -1, y: 0, z: 0}
       armLengthMlp: 1
       stretchCurve:
         serializedVersion: 2
@@ -3477,7 +3477,7 @@ MonoBehaviour:
       useAnimatedBendNormal: 0
     locomotion:
       mode: 0
-      weight: 1
+      weight: 0
       moveThreshold: 0.3
       animationHeader: 0
       minAnimationSpeed: 0.2
@@ -5149,7 +5149,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: fac8b9ad36d6c5449b0682a9519236bb,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: fac8b9ad36d6c5449b0682a9519236bb,
         type: 3}
@@ -5222,7 +5222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159555239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09f7c9062d4e5bd49b812fca2c117874, type: 3}
   m_Name: 
@@ -5235,7 +5235,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159555239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fd8608d77579fa4687f68409b02b7a5, type: 3}
   m_Name: 
@@ -5248,7 +5248,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159555239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79102c2ad344acc49adb7f49feebb94f, type: 3}
   m_Name: 
@@ -5274,7 +5274,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159555239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a39752dff51045f469467459b3d33390, type: 3}
   m_Name: 
@@ -5293,7 +5293,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159555239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc13b61b86e5ae44f8fc07eccd26a678, type: 3}
   m_Name: 
@@ -5370,6 +5370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: X_Bot_EditPaint005
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a91380d9a024ad44f854c288e155bd70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
