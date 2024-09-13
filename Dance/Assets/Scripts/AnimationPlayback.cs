@@ -43,6 +43,10 @@ public class AnimationPlayback : MonoBehaviour {
     void Start () {
         playbackObjs = gameObject.GetComponentsInChildren<Transform>();
 
+        foreach (var obj in playbackObjs) {
+            debugText.text = "Transform found: " + obj.name;
+        }
+
         vrHeadInput = GetComponent<VRHeadInput>();
         vrControllerInput = GetComponent<VRControllerInput>();
 
@@ -141,6 +145,8 @@ public class AnimationPlayback : MonoBehaviour {
                     float.Parse(data[dataIndex++]),
                     float.Parse(data[dataIndex++])
                 );
+                jointTransform.rotation = rotation;
+                debugText.text = $"{jointName} rotation applied: {rotation}";
             } else {
                 dataIndex += 4; // Skip the quaternion values if joint not found
             }
@@ -155,6 +161,8 @@ public class AnimationPlayback : MonoBehaviour {
                     float.Parse(data[dataIndex++]),
                     float.Parse(data[dataIndex++])
                 );
+                jointTransform.position = position;
+                debugText.text = $"{jointName} position applied: {position}";
             } else {
                 dataIndex += 3; // Skip the vector3 values if joint not found
             }
