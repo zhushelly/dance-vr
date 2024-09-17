@@ -69,7 +69,7 @@ public class AnimationPlayback : MonoBehaviour {
                     motionData.Add(line);
                 }
             }
-            debugText.text = "Motion data loaded: " + motionData.Count + " frames.";
+            debugText.text = "Motion data loaded: " + filePath + " with " + motionData.Count + " frames.";
         } else {
             debugText.text = "No motion file found to play at path: " + filePath;
         }
@@ -133,13 +133,19 @@ public class AnimationPlayback : MonoBehaviour {
     void ApplyFrameData(string frameData) {
         string[] data = frameData.Split(',');
 
+        if (data.Length != 169) {
+            debugText.text = $"Data length mismatch. Expected: 169, Got: {data.Length}";
+            return;
+        }
+
         int dataIndex = 0;
 
         // Apply rotation data
         foreach (var jointName in rotationJointNames) {
             Transform jointTransform = GetTransformByName(jointName);
+            debugText.text = "trying to parse rotation data";
             if (jointTransform != null) {
-                jointTransform.rotation = new Quaternion(
+                Quaternion rotation = new Quaternion(
                     float.Parse(data[dataIndex++]),
                     float.Parse(data[dataIndex++]),
                     float.Parse(data[dataIndex++]),
@@ -155,8 +161,9 @@ public class AnimationPlayback : MonoBehaviour {
         // Apply position data
         foreach (var jointName in jointOrder) {
             Transform jointTransform = GetTransformByName(jointName);
+            debugText.text = "trying to parse position data";
             if (jointTransform != null) {
-                jointTransform.position = new Vector3(
+                Vector3 position = new Vector3(
                     float.Parse(data[dataIndex++]),
                     float.Parse(data[dataIndex++]),
                     float.Parse(data[dataIndex++])

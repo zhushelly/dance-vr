@@ -3306,7 +3306,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193227075}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4794923b04673b140860b5608e5ab229, type: 3}
   m_Name: 
@@ -3321,7 +3321,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193227075}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 074601db2ed18704183004cb040ca907, type: 3}
   m_Name: 
@@ -3591,6 +3591,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1639418957}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1193227081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193227075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc13b61b86e5ae44f8fc07eccd26a678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: motiondata
+  playbackText: {fileID: 1964602098}
+  debugText: {fileID: 1375737369}
+  inputActionAsset: {fileID: -944628639613478452, guid: 80d8fcc520f4ea9468b328204a3bed09,
+    type: 3}
+--- !u!114 &1193227082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193227075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39752dff51045f469467459b3d33390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: motiondata
+  inputActionAsset: {fileID: -944628639613478452, guid: 80d8fcc520f4ea9468b328204a3bed09,
+    type: 3}
+  recordLimitedFrames: 0
+  recordFrames: 1000
+  recordBlendShape: 0
+  recordingText: {fileID: 1964602098}
 --- !u!4 &1236572906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5465940246521907071, guid: fac8b9ad36d6c5449b0682a9519236bb,
@@ -3809,8 +3845,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 1
+  m_fontSizeBase: 1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3914,7 +3950,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3, y: 1.5}
-  m_SizeDelta: {x: 20, y: 5}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1390790717
 GameObject:
@@ -5392,6 +5428,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1193227076}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a91380d9a024ad44f854c288e155bd70,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193227082}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a91380d9a024ad44f854c288e155bd70,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193227081}
   m_SourcePrefab: {fileID: 100100000, guid: a91380d9a024ad44f854c288e155bd70, type: 3}
 --- !u!4 &1799848308 stripped
 Transform:

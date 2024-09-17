@@ -25,7 +25,7 @@ public class AnimationRecorder : MonoBehaviour {
 
     Transform[] recordObjs;
     SkinnedMeshRenderer[] blendShapeObjs;
-    List<SkinnedMeshRenderer> blendShapeRecorders;
+    List<SkinnedMeshRenderer> blendShapeRecorders; 
 
     bool isRecording = false;
     float nowTime = 0.0f;
