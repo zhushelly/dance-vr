@@ -3608,6 +3608,7 @@ MonoBehaviour:
   debugText: {fileID: 1375737369}
   inputActionAsset: {fileID: -944628639613478452, guid: 80d8fcc520f4ea9468b328204a3bed09,
     type: 3}
+  VRIKComponent: {fileID: 1193227078}
 --- !u!114 &1193227082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3627,6 +3628,57 @@ MonoBehaviour:
   recordFrames: 1000
   recordBlendShape: 0
   recordingText: {fileID: 1964602098}
+--- !u!114 &1193227083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193227075}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0847c510a7fe5ea479cc2de54cac104c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: motiondata
+  playbackText: {fileID: 1964602098}
+  debugText: {fileID: 1375737369}
+  inputActionAsset: {fileID: -944628639613478452, guid: 80d8fcc520f4ea9468b328204a3bed09,
+    type: 3}
+--- !u!114 &1193227084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193227075}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eec414d782fbbf408a43bfeb992f05c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: motiondata
+  inputActionAsset: {fileID: -944628639613478452, guid: 80d8fcc520f4ea9468b328204a3bed09,
+    type: 3}
+  recordLimitedFrames: 0
+  recordFrames: 1000
+  recordBlendShape: 0
+  recordingText: {fileID: 1964602098}
+--- !u!114 &1193227085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193227075}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30e7a6d9defae584facc8407c49c8cf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ik: {fileID: 1193227078}
+  inputActions: {fileID: -944628639613478452, guid: 9e5f013dd35aa114e8e45f4259dc9ca6,
+    type: 3}
 --- !u!4 &1236572906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5465940246521907071, guid: fac8b9ad36d6c5449b0682a9519236bb,
@@ -5339,6 +5391,7 @@ MonoBehaviour:
   debugText: {fileID: 0}
   inputActionAsset: {fileID: -944628639613478452, guid: 80d8fcc520f4ea9468b328204a3bed09,
     type: 3}
+  VRIKComponent: {fileID: 0}
 --- !u!1001 &1639418957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5436,6 +5489,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1193227081}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a91380d9a024ad44f854c288e155bd70,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193227084}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a91380d9a024ad44f854c288e155bd70,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193227083}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a91380d9a024ad44f854c288e155bd70,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193227085}
   m_SourcePrefab: {fileID: 100100000, guid: a91380d9a024ad44f854c288e155bd70, type: 3}
 --- !u!4 &1799848308 stripped
 Transform:

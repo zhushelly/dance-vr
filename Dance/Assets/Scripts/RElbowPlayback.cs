@@ -1,17 +1,16 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-public class AnimationPlayback : MonoBehaviour {
+public class RElbowPlayback : MonoBehaviour {
 
     public string fileName = "motiondata";
     public TextMeshPro playbackText;
     public TextMeshPro debugText;
 
-    Transform[] playbackObjs;
+    Transform rElbowTransform; // Reference to R_Elbow transform
     bool isPlaying = false;
     int frameIndex = 0;
     List<string> motionData;
@@ -21,35 +20,33 @@ public class AnimationPlayback : MonoBehaviour {
     private InputAction togglePlaybackAction;
 
     private int fileIndex = 0;  // Define fileIndex
-    
-    private readonly string[] rotationJointNames = new string[] {
-        "Pelvis", "R_Hip", "L_Hip", "Spine1", "R_Knee", "L_Knee", "Spine2", "R_Ankle", "L_Ankle", 
-        "Spine3", "R_Foot", "L_Foot", "Neck", "R_Collar", "L_Collar", "Head", "R_Shoulder", 
-        "L_Shoulder", "R_Elbow", "L_Elbow", "R_Wrist", "L_Wrist"
-    };
 
-    private readonly string[] jointOrder = new string[] {
-        "Pelvis", "R_Hip", "L_Hip", "Spine1", "R_Knee", "L_Knee", "Spine2", "R_Ankle", "L_Ankle", 
-        "Spine3", "R_Foot", "L_Foot", "Neck", "R_Collar", "L_Collar", "Head", "R_Shoulder", 
-        "L_Shoulder", "R_Elbow", "L_Elbow", "R_Wrist", "L_Wrist", "Head_End", "R_Foot_End", 
-        "L_Foot_End", "R_Hand", "L_Hand"
-    };
-
+    // Declare the VR input references
     private VRHeadInput vrHeadInput;
     private VRControllerInput vrControllerInput;
 
-    // Reference to the VR IK component
-    public MonoBehaviour VRIKComponent;  // Replace 'MonoBehaviour' with the actual type if you know it (e.g., VRIK)
-
     void Start () {
-        playbackObjs = gameObject.GetComponentsInChildren<Transform>();
+        // Find the R_Elbow transform
+        rElbowTransform = GetTransformByName("R_Elbow");
 
-        foreach (var obj in playbackObjs) {
-            debugText.text = "Transform found: " + obj.name;
+        if (rElbowTransform != null) {
+            debugText.text = "R_Elbow transform found.";
+        } else {
+            debugText.text = "R_Elbow transform not found!";
         }
 
+        // Initialize VR input components
         vrHeadInput = GetComponent<VRHeadInput>();
         vrControllerInput = GetComponent<VRControllerInput>();
+
+        // Check if VR inputs are found
+        if (vrHeadInput == null) {
+            debugText.text += "\nVRHeadInput component not found!";
+        }
+
+        if (vrControllerInput == null) {
+            debugText.text += "\nVRControllerInput component not found!";
+        }
 
         LoadMotionData();
 
@@ -106,18 +103,16 @@ public class AnimationPlayback : MonoBehaviour {
             if (playbackText != null) {
                 playbackText.text = "Playback Started";
             }
-
-            // Disable VR inputs
-            if (vrHeadInput != null) vrHeadInput.enabled = false;
-            if (vrControllerInput != null) vrControllerInput.enabled = false;
-
-            // Disable VR IK component
-            if (VRIKComponent != null) {
-                VRIKComponent.enabled = false;
-                debugText.text = "VR IK disabled.";
+        } else {
+            if (playbackText != null) {
+                playbackText.text = "No Motion Data";
             }
+        }
+
+        // Disable VR inputs
+        if (vrHeadInput != null) vrHeadInput.enabled = false;
+        if (vrControllerInput != null) vrControllerInput.enabled = false;
         
-        } 
     }
 
     public void StopPlayback() {
@@ -132,58 +127,33 @@ public class AnimationPlayback : MonoBehaviour {
         // Re-enable VR inputs
         if (vrHeadInput != null) vrHeadInput.enabled = true;
         if (vrControllerInput != null) vrControllerInput.enabled = true;
-
-        // Re-enable VR IK component
-        if (VRIKComponent != null) {
-            VRIKComponent.enabled = true;
-            debugText.text = "VR IK re-enabled.";
-        }
     }
 
     void ApplyFrameData(string frameData) {
+        // Split the data assuming only one rotation quaternion is present for R_Elbow
         string[] data = frameData.Split(',');
 
-        if (data.Length != 169) {
-            debugText.text = $"Data length mismatch. Expected: 169, Got: {data.Length}";
+        if (data.Length != 4) { // Expecting 4 values for quaternion
+            debugText.text = $"Data length mismatch. Expected: 4, Got: {data.Length}";
             return;
         }
 
-        int dataIndex = 0;
-
-        // Apply rotation data
-        foreach (var jointName in rotationJointNames) {
-            Transform jointTransform = GetTransformByName(jointName);
-            if (jointTransform != null) {
-                Quaternion rotation = new Quaternion(
-                    float.Parse(data[dataIndex++]),
-                    float.Parse(data[dataIndex++]),
-                    float.Parse(data[dataIndex++]),
-                    float.Parse(data[dataIndex++])
-                );
-                jointTransform.rotation = rotation;
-            } else {
-                dataIndex += 4; // Skip the quaternion values if joint not found
-            }
-        }
-
-        // Apply position data
-        foreach (var jointName in jointOrder) {
-            Transform jointTransform = GetTransformByName(jointName);
-            if (jointTransform != null) {
-                Vector3 position = new Vector3(
-                    float.Parse(data[dataIndex++]),
-                    float.Parse(data[dataIndex++]),
-                    float.Parse(data[dataIndex++])
-                );
-                jointTransform.position = position;
-            } else {
-                dataIndex += 3; // Skip the vector3 values if joint not found
-            }
+        // Apply rotation data to R_Elbow joint
+        if (rElbowTransform != null) {
+            Quaternion rotation = new Quaternion(
+                float.Parse(data[0]),
+                float.Parse(data[1]),
+                float.Parse(data[2]),
+                float.Parse(data[3])
+            );
+            rElbowTransform.rotation = rotation;
+            debugText.text = $"R_Elbow rotation applied: {rotation}";
         }
     }
 
     Transform GetTransformByName(string name) {
-        foreach (var transform in playbackObjs) {
+        Transform[] transforms = gameObject.GetComponentsInChildren<Transform>();
+        foreach (var transform in transforms) {
             if (transform.name == name) {
                 return transform;
             }
